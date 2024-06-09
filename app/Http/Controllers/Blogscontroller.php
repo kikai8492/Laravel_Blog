@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Blog;
 
-class blogs extends Controller
+class BlogsController extends Controller
 {
     /**
      * Display a listing of the resource.

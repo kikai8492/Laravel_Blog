@@ -6,7 +6,12 @@
   <title>Document</title>
 </head>
 <body>
-  <form>
-  </form> 
+  @foreach ($blogs as $blog)
+    <table>
+      <th>
+        {{$blog->title}}
+      </th>
+    </table>
+  @endforeach
 </body>
 </html>
