@@ -7,7 +7,26 @@
 </head>
 <body>
   <h1>ブログ登録画面</h1>
-  <form action='' method='post'>
-  </form>
+  <form action='{{route('blogs.store')}}' method='post'>
+    @csrf
+    @if($errors->any())
+      <div class="mb-8 py-4 px-6 border border-red-300 bg-red-50 rounded">
+        <ul>
+          @foreach($errors->all() as $error)
+            <li class="text-red-400">{{$error}}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
+
+    <div>
+      <label for="message">title</label><br>
+      <input type="text" />
+    </div>
+
+    <div class="button">
+      <button type="submit">メッセージを送信</button>
+    </div>
+</form>
 </body>
 </html>

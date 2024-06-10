@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use App\Http\Requests\BlogRequest;
 
 class BlogsController extends Controller
 {
@@ -27,9 +28,12 @@ class BlogsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(BlogRequest $request)
     {
-        //
+        $validated = $request->validated();
+		Blog::create($validated);
+
+		return to_route('blogs.index') -> with('success','ブログを投稿しました');
     }
 
     /**
