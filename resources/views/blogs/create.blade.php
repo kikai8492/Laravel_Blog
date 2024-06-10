@@ -20,13 +20,13 @@
     @endif
 
     <div>
-      <label for="message">title</label><br>
-      <input type="text" />
+      <label for="title">title</label><br>
+      <input type="text" name="title" id="title"/>
     </div>
 
     <div class="button">
       <button type="submit">メッセージを送信</button>
     </div>
-</form>
+  </form>
 </body>
 </html>
