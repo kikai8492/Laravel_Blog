@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>編集画面</h1>
-  <form action='{{route('blogs.update')}}' method='post'>
+  <form action='{{route('blogs.update', ['blog' => $blog->id])}}' method='post'>
     @csrf
     @method('PUT')
     @if($errors->any())
@@ -29,5 +29,8 @@
       <button type="submit">更新</button>
     </div>
   </form>
+  
+<a href="{{ route('blogs.index') }}">戻る</a> 
+
 </body>
 </html>

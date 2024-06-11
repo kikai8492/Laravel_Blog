@@ -12,7 +12,7 @@
       <th>
         {{$blog->title}}
         <a href="{{ route('blogs.show', $blog->id) }}">詳細</a>
-
+        <a href="{{ route('blogs.edit', $blog->id) }}">編集</a>
       </th>
     </table>
   @endforeach
