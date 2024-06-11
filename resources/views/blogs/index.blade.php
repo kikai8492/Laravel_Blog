@@ -11,6 +11,8 @@
     <table>
       <th>
         {{$blog->title}}
+        <a href="{{ route('blogs.show') }}"></a>
+
       </th>
     </table>
   @endforeach
