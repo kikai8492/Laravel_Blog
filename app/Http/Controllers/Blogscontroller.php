@@ -70,6 +70,8 @@ class BlogsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $blog = Blog::find($id);
+        $blog->delete();
+        return redirect()->route('blogs.index')->with('success', 'ブログを削除しました');
     }
 }
