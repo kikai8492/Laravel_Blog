@@ -11,7 +11,7 @@
     <table>
       <th>
         {{$blog->title}}
-        <a href="{{ route('blogs.show') }}"></a>
+        <a href="{{ route('blogs.show', $blog->id) }}">詳細</a>
 
       </th>
     </table>

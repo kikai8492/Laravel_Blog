@@ -6,6 +6,7 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <p>{{$blog->title}}</p>
+  <a href="{{ route('blogs.index') }}">戻る</a>
 </body>
 </html>

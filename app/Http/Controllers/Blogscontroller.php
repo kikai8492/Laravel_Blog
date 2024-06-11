@@ -42,7 +42,7 @@ class BlogsController extends Controller
     public function show(string $id)
     {
         $blog = Blog::find($id);
-        return view('blogs.show')
+        return view('blogs.show', compact('blog'));
     }
 
     /**
@@ -50,15 +50,19 @@ class BlogsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $blog = Blog::find($id);
+        return view('blogs.edit',['blog'=>$blog]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(BlogRequest $request, string $id)
     {
-        //
+        $blog = Blog::find($id);
+        $updateData = $request->validated();
+        $blog->update($updateData);
+        return to_route('blogs.index') -> with('success','ブログを更新しました');
     }
 
     /**
