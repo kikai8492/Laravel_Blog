@@ -41,7 +41,8 @@ class BlogsController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $blog = Blog::find($id);
+        return view('blogs.show')
     }
 
     /**
