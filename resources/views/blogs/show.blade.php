@@ -6,7 +6,8 @@
   <title>Document</title>
 </head>
 <body>
-  <p>{{$blog->title}}</p>
+  <h1>詳細画面</h1>
+  <p>ブログ名:{{$blog->title}}</p>
   <a href="{{ route('blogs.index') }}">戻る</a>
 </body>
 </html>

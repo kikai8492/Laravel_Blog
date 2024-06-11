@@ -20,7 +20,7 @@
     @endif
 
     <div>
-      <label for="title">title</label><br>
+      <label for="title">ブログ名</label><br>
       <input type="text" name="title" id="title"/>
     </div>
 
